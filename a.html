@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <script type="text/javascript">
-        function sum() {
-            form.c.value = form.a.value + form.b.value;
+        function sum() {//form.a.value と form.b.value は文字列として扱われ、+ 演算子を使用すると、数値の加算ではなく文字列の結合が行われるため
+            var a = parseFloat(form.a.value);
+            var b = parseFloat(form.b.value);
+            form.c.value = a + b;
         }
     </script>
 </head>
